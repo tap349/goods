@@ -1,6 +1,6 @@
 module Goods
   class Catalog
-    attr_reader :name, :company, :categories, :currencies, :offers
+    attr_reader :url, :name, :company, :categories, :currencies, :offers
 
     def initialize(params)
       if params[:io]
