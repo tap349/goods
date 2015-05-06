@@ -30,6 +30,7 @@ module Goods
 
       @name = @xml.name
       @company = @xml.company
+      @url = @xml.url
 
       @categories = CategoriesList.new(@xml.categories)
       @currencies = CurrenciesList.new(@xml.currencies)

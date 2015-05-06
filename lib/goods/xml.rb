@@ -34,6 +34,10 @@ module Goods
       @company ||= extract_text shop_node, 'company'
     end
 
+    def url
+      @company ||= extract_text shop_node, 'url'
+    end
+
 
     private
 
