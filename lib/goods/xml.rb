@@ -132,7 +132,9 @@ module Goods
         description: "description",
         name: "name",
         vendor: "vendor",
-        model: "model"
+        model: "model",
+        isbn: 'ISBN',
+        adult: 'adult'
       }.each do |property, xpath|
         offer_hash[property] = extract_text(offer, xpath)
       end
