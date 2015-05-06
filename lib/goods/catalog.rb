@@ -1,6 +1,6 @@
 module Goods
   class Catalog
-    attr_reader :categories, :currencies, :offers
+    attr_reader :name, :company, :categories, :currencies, :offers
 
     def initialize(params)
       if params[:io]
@@ -27,9 +27,14 @@ module Goods
 
     def from_io(xml_io, url, encoding)
       @xml = XML.new(xml_io, url, encoding)
+
+      @name = @xml.name
+      @company = @xml.company
+
       @categories = CategoriesList.new(@xml.categories)
       @currencies = CurrenciesList.new(@xml.currencies)
       @offers = OffersList.new(@categories, @currencies, @xml.offers)
     end
   end
 end
+

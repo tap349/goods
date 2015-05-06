@@ -26,6 +26,14 @@ module Goods
       @generation_date ||= extract_catalog_generation_date
     end
 
+    def name
+      @name ||= extract_text shop_node, 'name'
+    end
+
+    def company
+      @company ||= extract_text shop_node, 'company'
+    end
+
 
     private
 
