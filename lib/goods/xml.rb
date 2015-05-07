@@ -131,6 +131,7 @@ module Goods
         picture: "picture",
         description: "description",
         name: "name",
+        type_prefix: "typePrefix",
         vendor: "vendor",
         model: "model",
         isbn: 'ISBN',

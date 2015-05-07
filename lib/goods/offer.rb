@@ -4,7 +4,7 @@ module Goods
     attr_field :category_id, :currency_id, :available, :description,
                :model, :name, :picture, :vendor, :url
     attr_field :price, type: :float
-    attr_field :isbn, :adult
+    attr_field :type_prefix, :isbn, :adult
 
     def convert_currency(other_currency)
       self.price *= currency.in(other_currency)
