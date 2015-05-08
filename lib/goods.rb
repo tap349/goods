@@ -26,12 +26,6 @@ module Goods
     from_io(load(file), nil, encoding)
   end
 
-  private
-
-  def self.load(source)
-    open source
-  end
-
   def self.from_io(xml_io, url=nil, encoding=nil)
     validator = XML::Validator.new
     if validator.valid? xml_io
@@ -40,5 +34,11 @@ module Goods
     else
       raise XML::InvalidFormatError, validator.error
     end
+  end
+
+  private
+
+  def self.load(source)
+    open source
   end
 end
