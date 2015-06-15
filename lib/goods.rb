@@ -37,8 +37,8 @@ module Goods
     #else
       #raise XML::InvalidFormatError, validator.error
     #end
-      xml_io.rewind
-      Catalog.new(io: xml_io, url: url, encoding: encoding)
+    xml_io.rewind
+    Catalog.new(io: xml_io, url: url, encoding: encoding)
   end
 
   private
