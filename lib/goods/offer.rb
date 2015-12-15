@@ -27,7 +27,7 @@ module Goods
       validate :id, proc { |val| !(val.nil? || val.empty?) }
       validate :category_id, proc { |category_id| category_id }
       validate :currency_id, proc { |currency_id| currency_id }
-      validate :price, proc { |price| price && price > 0 }
+      validate :price, proc { |price| price && price >= 0 }
     end
 
   end
