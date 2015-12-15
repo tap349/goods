@@ -21,7 +21,7 @@ describe Goods::Offer do
     context "invalid cases" do
       let(:invalid_offer) { Goods::Offer.new({}) }
 
-      [:id, :currency_id, :price].each do |field|
+      [:id, :category_id, :currency_id, :price].each do |field|
         it "should reject offers without #{field}" do
           expect(invalid_offer).not_to be_valid
           expect(invalid_offer.invalid_fields).to include(field)

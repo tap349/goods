@@ -27,9 +27,9 @@ describe Goods::Currency do
       end
     end
 
-    context 'rate is less 1' do
+    context 'rate is less than 1' do
       let(:valid_description) { {id: "VAL_CUR", rate: 0.0238, plus: 0} }
-      it "should return true for currency with rate less 1" do
+      it "should return true for currency with rate less than 1" do
         expect(Goods::Currency.new(valid_description).valid?).to be true
       end
     end
